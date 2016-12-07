@@ -16,6 +16,7 @@ int main(void) {
 		P1OUT |= (BIT0|BIT6);	// Encendemos los dos leds
 		if (!(P1IN&BIT3)){
 			flag=1;
+			__delay_cycles(1000);
 		}
 		if ((P1IN&BIT3)&&flag){
 			flag=0;
@@ -27,6 +28,7 @@ int main(void) {
 			P1OUT &= ~(BIT0);	// Apagamos Led1
 			if (!(P1IN&BIT3)){
 				flag=1;
+				__delay_cycles(1000);
 			}
 			if ((P1IN&BIT3)&&flag){
 				flag=0;
@@ -38,6 +40,7 @@ int main(void) {
 			P1OUT &= ~(BIT6);	// Apagamos Led2
 			if (!(P1IN&BIT3)){
 				flag=1;
+				__delay_cycles(1000);
 			}
 			if((P1IN&BIT3)&&flag){
 				flag=0;
@@ -48,6 +51,7 @@ int main(void) {
 			P1OUT &= ~(BIT0|BIT6);	// Apagamos los dos leds
 			if (!(P1IN&BIT3)){
 				flag=1;
+				__delay_cycles(1000);
 			}
 			if ((P1IN&BIT3)&&flag){
 				flag=0;
