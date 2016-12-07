@@ -16,6 +16,7 @@ int main(void) {
 		P1OUT |= (BIT0|BIT6);	// Encendemos los dos leds
 		if (!(P1IN&BIT3)){
 			flag=1;
+			__delay_cycles(1000);
 		}
 		if ((P1IN&BIT3)&&flag){
 			flag=0;
