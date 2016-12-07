@@ -26,7 +26,6 @@ int main(void) {
 		case 1:
 			P1OUT |= (BIT6);	// Encendemos Led2
 			P1OUT &= ~(BIT0);	// Apagamos Led1
-
 			if (!(P1IN&BIT3)){
 				flag=1;
 				__delay_cycles(1000);
