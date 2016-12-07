@@ -58,7 +58,7 @@ int main(void) {
 	}
 	return 0;
 }
-git fetch origin
-git checkout -b channtron-patch-1 origin/channtron-patch-1
-git merge master
+git checkout master
+git merge --no-ff channtron-patch-1
+git push origin master
 
